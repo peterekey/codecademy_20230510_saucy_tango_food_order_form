@@ -10,7 +10,7 @@ function FoodOrderForm() {
     return (
         <form>
             <label htmlFor="name">Name:</label>
-            <input id="name" value={name}/>
+            <input id="name" value={name} onChange={(e) => setName(e.target.value)}/>
 
             <label htmlFor="phone">Phone:</label>
             <input id="phone" value={phone}/>
