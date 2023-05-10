@@ -7,13 +7,14 @@ function FoodOrderForm() {
     const [address, setAddress] = useState('')
     const [order, setOrder] = useState('')
 
-    const handleSubmit = (e) => {
+    const handleSubmit = e => {
+        console.log(e)
         e.preventDefault()
         alert(`Order successful! Your order was ${order}. Please show your confirmation number for pickup.`)
     }
 
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="name">Name:</label>
             <input id="name" value={name} onChange={(e) => setName(e.target.value)}/>
 
